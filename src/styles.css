@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover{
+    color: blue;
+}
+
+/*Form*/
+
+form {
+ width:450px ;
+ margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: .9em;
+    margin-bottom: .4em;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.6em;
+    font-size: 0.8em;
+}
+
+input[type="submit"] {
+    background-color: #ededf2;
+    border: 1px solid transparent;
+    padding: .6em 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+input[type="submit"]:hover {
+    color:#6c788e;
+    border:1px solid #6c788e;
+    background-color: transparent;
+}
+
+
+

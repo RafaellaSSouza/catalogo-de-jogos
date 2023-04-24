@@ -1,0 +1,74 @@
+<form (ngSubmit)="submit()" [formGroup]="gameForm" #formDir="ngForm" >
+    
+    <div class="form-group">
+        <label for="titulo">Título</label>
+        <input 
+            type="text"
+            placeholder="Coloque o nome do jogo"
+            formControlName="titulo" 
+            required
+        />
+        <div class="validacao" *ngIf="titulo.invalid && formDir.submitted">
+            <p *ngIf="titulo.errors?.['required']" >O título é obrigatório</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="descricao">Descrição</label>
+        <textarea 
+            type="text" 
+            placeholder="Coloque a descriçao do jogo" 
+            formControlName="descricao" 
+            required>
+        </textarea>
+        <div class="validacao" *ngIf="descricao.invalid && formDir.submitted">
+            <p *ngIf="descricao.errors?.['required']" >A descrição é obrigatória</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="lancamento">Data de lançamento</label>
+        <input 
+            type="text" 
+            placeholder="Coloque a data de lançamento" 
+            formControlName="lancamento"
+            required
+        />
+        <div class="validacao" *ngIf="lancamento.invalid && formDir.submitted">
+            <p *ngIf="lancamento.errors?.['required']" >A data de lançamento é obrigatória</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="genero">Gênero</label>
+        <input 
+            type="text" 
+            placeholder="Coloque o gênero do jogo"
+            formControlName="genero"
+            required 
+        />
+        <div class="validacao" *ngIf="genero.invalid && formDir.submitted">
+            <p *ngIf="genero.errors?.['required']" >O gênero é obrigatório</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="desenvolvedora">Desenvolvedor/a</label>
+        <input 
+            type="text" 
+            placeholder="Coloque a desenvolvedora do jogo"
+            formControlName="desenvolvedora"
+            required 
+        />
+        <div class="validacao" *ngIf="desenvolvedora.invalid && formDir.submitted">
+            <p *ngIf="desenvolvedora.errors?.['required']" >Informe o(a) desenvolvedor(a)</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="imagem">Insira uma imagem (opcional)</label>
+        <input type="file" (change)="onFileSelected($event)" />
+    </div> 
+
+    <input type="submit" value="{{ btnEnviar }}" />
+</form>

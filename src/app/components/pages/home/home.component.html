@@ -1,0 +1,41 @@
+<div class="container">
+    <h1>Lista de jogos</h1>
+    <div class="search-container">
+        <form>
+            <fa-icon [icon]="faSearch"></fa-icon>
+            <input 
+                type="text" 
+                placeholder="Busque por um jogo..."
+                (input)="search($event)"
+            />
+        </form>
+    </div>
+
+    <div *ngIf="games.length > 0; else noGames">
+        <div >
+            <div class="game-card" *ngFor="let game of games">
+                <img 
+                src="http://localhost:3333/uploads/{{game.image}}" 
+                alt="{{game.titulo}}"
+                />
+                <div class="box1">
+                    <h3>{{game.titulo}}</h3>
+                    <p>{{game.descricao}}</p>
+                </div>
+                <div class="box2">
+                    <p>Lançado em: {{game.lancamento}}</p>
+                    <p>Desenvolvido por: {{game.desenvolvedora}}</p>
+                </div>
+                <div class="box-acoes">
+                    <a routerLink="/games/editar/{{game.id}}"><fa-icon [icon]="faEdit"></fa-icon>Editar</a>
+                    <button (click)="removeHandler(game.id!)"><fa-icon [icon]="faTimes"></fa-icon>Excluir</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <ng-template #noGames>
+        <h1>Nenhum jogo foi cadastrado.</h1>
+    </ng-template>
+
+</div>

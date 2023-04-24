@@ -1,0 +1,77 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+form input {
+    margin-left: 0.6em;
+}
+
+.game-card {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1em;
+    border: 1px solid #6c788e;
+    border-radius: 5px;
+    padding: 1em;
+    align-items: center;
+}
+
+.game-card img {
+    width: 20%;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.6em;
+    width: 40%;
+    text-align: center;
+}
+
+.box1 h3 {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    
+}
+
+.box2{
+    width: 20%;
+    padding-left: 0.6em;
+}
+
+.box-acoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 20%;
+    align-items: center;
+}
+
+.box-acoes a, button {
+    margin: 0 0 0.4em 0.4em; 
+    padding: 0.4em 1em;
+    border: 1px solid #6c788e;
+    cursor: pointer;
+    background-color: #ededf2;
+    width: 80%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+fa-icon {
+    padding-right: 0.4em;
+}

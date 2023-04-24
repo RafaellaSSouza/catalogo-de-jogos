@@ -1,0 +1,29 @@
+.message {
+    position: fixed;
+    top: 3em;
+    right: 4em;
+    width: 60%;
+    margin-left: 50%;
+    left: -25%;
+    z-index: 10;
+    background-color: #ededf2;
+    border: 2px solid #6c788e;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-message {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.limpar {
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+p{
+    color: #6c788e;
+}

@@ -1,0 +1,29 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #ededf2;
+    align-items: center;
+    width: 100%;
+    border-bottom: 2px solid #6c788e;
+    border-radius:0px 0px 7px 7px;
+}
+
+img {
+    width: 50px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    list-style: none;    
+    color: #6c788e;
+    margin-right: 1em;
+}
+
+a:hover {
+    background-color: #fcfdff;
+}
